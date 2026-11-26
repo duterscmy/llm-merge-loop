@@ -1,0 +1,107 @@
+{
+  "model": "Llama-2-7b",
+  "compression": "CoMe concat_merge, 32 to 29 physical layers (9.01%)",
+  "merge_configuration": {
+    "paper_aligned": true,
+    "calibration_dataset": "WikiText-2",
+    "calibration_samples": 256,
+    "seed": 10,
+    "merge_item": 2,
+    "p": 1,
+    "rho_minimum_retention": 0.0,
+    "post_training": false
+  },
+  "mmlu_included": false,
+  "variants": {
+    "base": {
+      "physical_layers": 32,
+      "logical_executions": 32,
+      "parameters": 6738415616,
+      "wiki2_ppl": 5.4682571538967295,
+      "c4_ppl": 7.266678972438821,
+      "commonsense_percent": {
+        "arc_challenge": 45.73378839590443,
+        "arc_easy": 74.03198653198653,
+        "hellaswag": 76.13025293766182,
+        "openbookqa": 44.4,
+        "piqa": 78.99891186071817,
+        "winogrande": 69.6921862667719
+      },
+      "commonsense_average_percent": 64.83118766550714,
+      "slurm_job_id_ppl": "3200178",
+      "slurm_job_id_tasks": "3200258"
+    },
+    "merged": {
+      "physical_layers": 29,
+      "logical_executions": 29,
+      "parameters": 6131265536,
+      "wiki2_ppl": 6.232759688801927,
+      "c4_ppl": 8.549379991014293,
+      "commonsense_percent": {
+        "arc_challenge": 43.344709897610926,
+        "arc_easy": 70.32828282828282,
+        "hellaswag": 74.22824138617806,
+        "openbookqa": 42.0,
+        "piqa": 77.14907508161045,
+        "winogrande": 68.35043409629044
+      },
+      "commonsense_average_percent": 62.56679054832878,
+      "slurm_job_id_ppl": "3200178",
+      "slurm_job_id_tasks": "3200259"
+    },
+    "merge_aware": {
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "wiki2_ppl": 7.065634861880967,
+      "c4_ppl": 9.648914912291378,
+      "commonsense_percent": {
+        "arc_challenge": 42.491467576791806,
+        "arc_easy": 69.61279461279462,
+        "hellaswag": 74.06891057558256,
+        "openbookqa": 41.4,
+        "piqa": 76.22415669205658,
+        "winogrande": 67.32438831886346
+      },
+      "commonsense_average_percent": 61.853619629348174,
+      "slurm_job_id_ppl": "3200178",
+      "slurm_job_id_tasks": "3200340"
+    },
+    "uniform": {
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "wiki2_ppl": 7.078947979008621,
+      "c4_ppl": 9.645237144923321,
+      "commonsense_percent": {
+        "arc_challenge": 36.94539249146758,
+        "arc_easy": 60.47979797979798,
+        "hellaswag": 70.8922525393348,
+        "openbookqa": 40.400000000000006,
+        "piqa": 75.84330794341676,
+        "winogrande": 66.06156274664562
+      },
+      "commonsense_average_percent": 58.43705228344379,
+      "slurm_job_id_ppl": "3200178",
+      "slurm_job_id_tasks": "3200345"
+    },
+    "random": {
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "wiki2_ppl": 7.05367269904934,
+      "c4_ppl": 9.720144061000715,
+      "commonsense_percent": {
+        "arc_challenge": 41.04095563139932,
+        "arc_easy": 68.35016835016835,
+        "hellaswag": 73.48137821151165,
+        "openbookqa": 41.199999999999996,
+        "piqa": 76.16974972796517,
+        "winogrande": 67.40331491712708
+      },
+      "commonsense_average_percent": 61.27426113969526,
+      "slurm_job_id_ppl": "3200178",
+      "slurm_job_id_tasks": "3200179"
+    }
+  }
+}

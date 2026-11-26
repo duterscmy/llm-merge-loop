@@ -1,0 +1,146 @@
+{
+  "metric_policy": {
+    "zero_shot": "length-normalized accuracy except WinoGrande accuracy",
+    "mmlu_primary": "macro-average of 57 subject accuracies"
+  },
+  "variants": {
+    "base": {
+      "slurm_job_id_zero_shot": "3161686",
+      "physical_layers": 32,
+      "logical_executions": 32,
+      "parameters": 7241732096,
+      "scores_percent": {
+        "arc_challenge": 53.58361774744027,
+        "arc_easy": 79.29292929292929,
+        "hellaswag": 81.05954989046008,
+        "openbookqa": 44.2,
+        "piqa": 81.93688792165396,
+        "winogrande": 73.79636937647987,
+        "mmlu": 63.57882585707218
+      },
+      "slurm_job_id_mmlu": "3167204",
+      "mmlu_subjects": 57,
+      "mmlu_macro_percent": 63.57882585707218,
+      "mmlu_micro_percent": 62.49821962683379,
+      "average_percent": 68.20688286943367,
+      "paper_percent": {
+        "arc_challenge": 54.01,
+        "arc_easy": 79.5,
+        "hellaswag": 81.06,
+        "openbookqa": 44.0,
+        "piqa": 82.05,
+        "winogrande": 74.03,
+        "mmlu": 62.52,
+        "average": 68.17
+      },
+      "delta_from_paper_points": {
+        "arc_challenge": -0.4263822525597263,
+        "arc_easy": -0.20707070707071296,
+        "hellaswag": -0.0004501095399263022,
+        "openbookqa": 0.20000000000000284,
+        "piqa": -0.11311207834603465,
+        "winogrande": -0.23363062352012776,
+        "mmlu": 1.0588258570721791
+      }
+    },
+    "merged": {
+      "slurm_job_id_zero_shot": "3161687",
+      "physical_layers": 29,
+      "logical_executions": 29,
+      "parameters": 6587396096,
+      "scores_percent": {
+        "arc_challenge": 51.19453924914675,
+        "arc_easy": 74.83164983164983,
+        "hellaswag": 76.81736705835492,
+        "openbookqa": 42.4,
+        "piqa": 78.72687704026116,
+        "winogrande": 72.53354380426204,
+        "mmlu": 63.06619876949179
+      },
+      "slurm_job_id_mmlu": "3167205",
+      "mmlu_subjects": 57,
+      "mmlu_macro_percent": 63.06619876949179,
+      "mmlu_micro_percent": 62.248967383563595,
+      "average_percent": 65.65288225045235,
+      "paper_percent": {
+        "arc_challenge": 48.55,
+        "arc_easy": 74.37,
+        "hellaswag": 76.93,
+        "openbookqa": 41.0,
+        "piqa": 79.6,
+        "winogrande": 72.61,
+        "mmlu": 61.52,
+        "average": 64.94
+      },
+      "delta_from_paper_points": {
+        "arc_challenge": 2.644539249146753,
+        "arc_easy": 0.4616498316498223,
+        "hellaswag": -0.11263294164508864,
+        "openbookqa": 1.3999999999999986,
+        "piqa": -0.8731229597388364,
+        "winogrande": -0.07645619573796125,
+        "mmlu": 1.546198769491788
+      }
+    },
+    "merge_aware": {
+      "slurm_job_id_zero_shot": "3161725",
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6587396096,
+      "scores_percent": {
+        "arc_challenge": 49.57337883959044,
+        "arc_easy": 71.71717171717171,
+        "hellaswag": 76.07050388368852,
+        "openbookqa": 42.199999999999996,
+        "piqa": 77.9651795429815,
+        "winogrande": 72.77032359905287,
+        "mmlu": 62.464595088043055
+      },
+      "slurm_job_id_mmlu": "3168893",
+      "mmlu_subjects": 57,
+      "mmlu_macro_percent": 62.464595088043055,
+      "mmlu_micro_percent": 61.522575131747615,
+      "average_percent": 64.68016466721829
+    },
+    "uniform": {
+      "slurm_job_id_zero_shot": "3161728",
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6587396096,
+      "scores_percent": {
+        "arc_challenge": 48.208191126279864,
+        "arc_easy": 73.82154882154882,
+        "hellaswag": 74.29794861581358,
+        "openbookqa": 42.4,
+        "piqa": 77.20348204570186,
+        "winogrande": 70.40252565114443,
+        "mmlu": 59.5639091516194
+      },
+      "slurm_job_id_mmlu": "3169046",
+      "mmlu_subjects": 57,
+      "mmlu_macro_percent": 59.5639091516194,
+      "mmlu_micro_percent": 58.253809998575704,
+      "average_percent": 63.69965791601542
+    },
+    "random": {
+      "slurm_job_id_zero_shot": "3161685",
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6587396096,
+      "scores_percent": {
+        "arc_challenge": 47.781569965870304,
+        "arc_easy": 73.02188552188552,
+        "hellaswag": 75.92113124875523,
+        "openbookqa": 42.4,
+        "piqa": 78.23721436343853,
+        "winogrande": 70.32359905288082,
+        "mmlu": 61.32574797428694
+      },
+      "slurm_job_id_mmlu": "3167193",
+      "mmlu_subjects": 57,
+      "mmlu_macro_percent": 61.32574797428694,
+      "mmlu_micro_percent": 59.77780942885629,
+      "average_percent": 64.14444973244534
+    }
+  }
+}

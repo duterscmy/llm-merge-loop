@@ -1,0 +1,116 @@
+{
+  "slurm_job_id": "3200259",
+  "variant": "merged",
+  "model_path": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/checkpoints/come-llama2-9pct-paper/Llama-2-7b-hf_concat_merge_bi_29_worepeat",
+  "tasks": [
+    "arc_easy",
+    "arc_challenge",
+    "hellaswag",
+    "openbookqa",
+    "piqa",
+    "winogrande"
+  ],
+  "num_fewshot": 0,
+  "limit": null,
+  "seed": 10,
+  "physical_layers": 29,
+  "logical_executions": 29,
+  "parameters": 6131265536,
+  "execution_plan": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "harness": {
+    "results": {
+      "arc_easy": {
+        "acc": 0.7327441077441077,
+        "acc_stderr": 0.00908046324601747,
+        "acc_norm": 0.7032828282828283,
+        "acc_norm_stderr": 0.009373559492986846
+      },
+      "arc_challenge": {
+        "acc": 0.40955631399317405,
+        "acc_stderr": 0.014370358632472447,
+        "acc_norm": 0.4334470989761092,
+        "acc_norm_stderr": 0.014481376224558898
+      },
+      "hellaswag": {
+        "acc": 0.5513841864170484,
+        "acc_stderr": 0.004963362085275559,
+        "acc_norm": 0.7422824138617805,
+        "acc_norm_stderr": 0.004364838000335626
+      },
+      "openbookqa": {
+        "acc": 0.298,
+        "acc_stderr": 0.020475118092988978,
+        "acc_norm": 0.42,
+        "acc_norm_stderr": 0.022094713229761784
+      },
+      "piqa": {
+        "acc": 0.7535364526659413,
+        "acc_stderr": 0.010054810789671822,
+        "acc_norm": 0.7714907508161044,
+        "acc_norm_stderr": 0.009796313511829515
+      },
+      "winogrande": {
+        "acc": 0.6835043409629045,
+        "acc_stderr": 0.013071868328051487
+      }
+    },
+    "versions": {
+      "arc_easy": 0,
+      "arc_challenge": 0,
+      "hellaswag": 0,
+      "openbookqa": 0,
+      "piqa": 0,
+      "winogrande": 0
+    },
+    "n_samples": {
+      "arc_easy": 2376,
+      "arc_challenge": 1172,
+      "hellaswag": 10042,
+      "openbookqa": 500,
+      "piqa": 1838,
+      "winogrande": 1267
+    },
+    "config": {
+      "model": null,
+      "model_args": null,
+      "num_fewshot": 0,
+      "batch_size": 8,
+      "batch_sizes": [],
+      "device": "cuda",
+      "no_cache": true,
+      "limit": null,
+      "bootstrap_iters": 1000,
+      "description_dict": null
+    }
+  }
+}

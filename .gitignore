@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.cache/
+.venv/
+.env
+/models/
+/checkpoints/
+/logs/
+results/**/packed/
+*.safetensors
+*.pt
+*.bin

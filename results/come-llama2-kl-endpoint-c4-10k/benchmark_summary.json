@@ -1,0 +1,76 @@
+{
+  "model": "Llama-2-7b",
+  "method": "CoMe 32-to-29 plus shared-layer loop, forward-logit-KL plus normalized group-endpoint hidden-state distillation",
+  "training": {
+    "dataset": "allenai/c4:en/c4-train.00000-of-01024.json.gz",
+    "sequence_length": 512,
+    "steps": 10000,
+    "tokens": 5120000,
+    "objective": "forward_kl_endpoint",
+    "temperature": 1.0,
+    "endpoint_weight_mode": "dynamic",
+    "endpoint_weight": 1.0,
+    "learning_rate": 1e-05,
+    "warmup_steps": 500,
+    "trainable_parameters": 607150080,
+    "training_seconds": 806.2298308829922,
+    "training_tokens_per_second": 6350.546461909647,
+    "validation_total_loss_before": 0.4907656745053828,
+    "validation_total_loss_after": 0.3075380518566817,
+    "validation_kl_loss_before": 0.2453828372526914,
+    "validation_kl_loss_after": 0.15376902581192553,
+    "validation_endpoint_loss_before": 0.1708351243287325,
+    "validation_endpoint_loss_after": 0.15257399575784802,
+    "validation_relative_reduction_percent": 10.689329049069071,
+    "slurm_job_id": "4212062"
+  },
+  "mmlu_included": false,
+  "variants": {
+    "merged": {
+      "physical_layers": 29,
+      "logical_executions": 29,
+      "parameters": 6131265536,
+      "wiki2_ppl": 6.277506407009008,
+      "c4_ppl": 8.60460885974582,
+      "commonsense_percent": {
+        "arc_challenge": 43.515358361774744,
+        "arc_easy": 70.1178451178451,
+        "hellaswag": 73.89962158932484,
+        "openbookqa": 42.0,
+        "piqa": 77.04026115342764,
+        "winogrande": 68.82399368587214
+      },
+      "commonsense_average_percent": 62.56617998470741,
+      "delta_from_untrained": {
+        "wiki2_ppl": 0.04474671820708043,
+        "c4_ppl": 0.055228868731527214,
+        "commonsense_average_points": -0.0006105636213717958
+      },
+      "slurm_job_id_ppl": "4212063",
+      "slurm_job_id_tasks": "4213290"
+    },
+    "merge_aware": {
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "wiki2_ppl": 6.514990105891888,
+      "c4_ppl": 8.757733457915588,
+      "commonsense_percent": {
+        "arc_challenge": 42.83276450511945,
+        "arc_easy": 70.41245791245791,
+        "hellaswag": 74.05895239992033,
+        "openbookqa": 41.8,
+        "piqa": 77.04026115342764,
+        "winogrande": 68.11365430149961
+      },
+      "commonsense_average_percent": 62.37634837873749,
+      "delta_from_untrained": {
+        "wiki2_ppl": -0.5506447559890786,
+        "c4_ppl": -0.8911814543757899,
+        "commonsense_average_points": 0.5227287493893158
+      },
+      "slurm_job_id_ppl": "4212063",
+      "slurm_job_id_tasks": "4212064"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "merge_method": "CoMe concat_merge",
+  "base_parameters": 7241732096,
+  "merged_parameters": 6587396096,
+  "parameter_sparsity": 0.0903562837351336,
+  "physical_layers": 29,
+  "merge_groups": [
+    [23, 24],
+    [25, 26],
+    [27, 28]
+  ],
+  "paper": {
+    "wiki2_ppl": 6.52,
+    "c4_ppl": 10.04
+  },
+  "reproduction": {
+    "slurm_job_id": "3155784",
+    "wiki2_ppl": 6.599740028381348,
+    "c4_ppl": 9.999356269836426
+  },
+  "loop_experiment": {
+    "slurm_job_id": "3155837",
+    "sequence_length": 2048,
+    "samples": 163,
+    "variants": {
+      "dense": 5.2520705223904365,
+      "merged": 6.5997399310760905,
+      "merge_aware": 7.912496129756255,
+      "uniform": 7.400752386209299,
+      "random_seed_10": 8.119958680991482
+    }
+  }
+}

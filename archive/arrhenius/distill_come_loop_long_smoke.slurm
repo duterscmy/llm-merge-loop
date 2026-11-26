@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#SBATCH --account=ehpc-reg-2026r01-278-gpu
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
+#SBATCH --gres=gpu:4
+#SBATCH --time=00:45:00
+#SBATCH --job-name=come-kd4-smoke
+#SBATCH --output=logs/%x-%j.log
+set -euo pipefail
+P=/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging
+source "$HOME/miniconda3/etc/profile.d/conda.sh"
+conda activate /nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/conda/envs/come
+cd "$P"
+export HF_HOME="$P/.cache/huggingface" HF_DATASETS_CACHE="$P/.cache/huggingface/datasets"
+export TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=8 PYTHONUNBUFFERED=1 TORCH_NCCL_ASYNC_ERROR_HANDLING=1
+hostname; uname -m; nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+torchrun --standalone --nproc_per_node=4 -m experiments.distill_come_loop_long \
+  --teacher-model "$P/models/Llama-2-7b-hf" \
+  --student-model "$P/checkpoints/come-llama2-kl-endpoint-c4-10k" \
+  --merge-info "$P/checkpoints/come-llama2-9pct-paper/Llama-2-7b-hf_concat_merge_bi_info.json" \
+  --run-dir "$P/checkpoints/come-llama2-kl-endpoint-long-smoke" \
+  --train-files en/c4-train.00000-of-01024.json.gz --sequence-length 128 \
+  --validation-blocks 4 --max-steps 2 --max-runtime-seconds 1200 \
+  --eval-interval-seconds 600 --learning-rate 5e-6 --warmup-steps 0 \
+  --endpoint-weight 0.1 --log-every 1 --resume never --skip-export

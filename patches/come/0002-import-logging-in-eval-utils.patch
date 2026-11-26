@@ -1,0 +1,16 @@
+diff --git a/utils/eval_utils.py b/utils/eval_utils.py
+--- a/utils/eval_utils.py
++++ b/utils/eval_utils.py
+@@ -1,5 +1,6 @@
+ import os
+ import time
++import logging
+ from tqdm import tqdm
+ import fnmatch
+ 
+@@ -132,4 +133,4 @@ def eval_zero_shot(model_name, task_list=['piqa','winogrande','hellaswag','arc_c
+         device='cuda',
+     )
+ 
+-    return results 
++    return results

@@ -1,0 +1,11 @@
+# The CUDA-enabled ARM64 torch build is inherited by cloning the existing
+# `log-prob` Conda environment on an Arrhenius GPU compute node. Do not install
+# or replace torch from this file.
+numpy==1.26.4
+transformers==4.47.1
+datasets==2.21.0
+accelerate==1.2.1
+scikit-learn==1.5.2
+sentencepiece==0.2.0
+protobuf==5.29.1
+huggingface-hub==0.26.5

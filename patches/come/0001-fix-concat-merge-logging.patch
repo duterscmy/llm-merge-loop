@@ -1,0 +1,12 @@
+diff --git a/methods/concat_merge.py b/methods/concat_merge.py
+--- a/methods/concat_merge.py
++++ b/methods/concat_merge.py
+@@ -319,7 +319,7 @@ def main_func(args, modelhander):
+         phase_name = f"{modelhander.config.num_hidden_layers}_to_{tar_lay_item}"
+         concat_merge_info[phase_name] = {}
+ 
+-        logging.info("*"*20, f"Pruning {modelhander.config.num_hidden_layers} to {tar_lay_item}", "*"*20)
++        logging.info(f"{'*' * 20} Pruning {modelhander.config.num_hidden_layers} to {tar_lay_item} {'*' * 20}")
+         logging.info(f"Layer importance: {', '.join([f'{k}→{x:.2f}' for k, x in enumerate(layer_importance)])}")
+         logging.info(f"Skip Layer importance: {', '.join([f'{k}→{x:.2f}' for k, x in enumerate(layer_importance_skip)])}")
+ 

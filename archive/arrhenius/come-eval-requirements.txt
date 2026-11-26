@@ -1,0 +1,8 @@
+# Pure Python/runtime dependencies required by the vendored evaluation harness.
+# Keep torch, CUDA, Transformers, Datasets, NumPy, and scikit-learn inherited
+# from the verified CoMe environment.
+sacrebleu==1.5.0
+sqlitedict==2.1.0
+pytablewriter==1.0.0
+rouge-score==0.1.2
+omegaconf==2.3.0

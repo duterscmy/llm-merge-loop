@@ -1,0 +1,105 @@
+{
+  "slurm_job_id": "4230528",
+  "datasets": [
+    "wiki2",
+    "c4"
+  ],
+  "sequence_length": 2048,
+  "samples": {
+    "wiki2": 166,
+    "c4": 256
+  },
+  "seed": 10,
+  "merge_mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    [
+      23,
+      24
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      27,
+      28
+    ],
+    29,
+    30,
+    31
+  ],
+  "variants": {
+    "merge_aware": {
+      "path": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/checkpoints/come-llama2-kl-endpoint-c4-10k",
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "execution_plan": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        23,
+        24,
+        24,
+        25,
+        25,
+        26,
+        27,
+        28
+      ],
+      "trainer_state": {
+        "path": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/checkpoints/come-llama2-kl-endpoint-c4-24h-1gpu/eval-snapshots/best-step-201400.pt",
+        "step": 201400,
+        "best": {
+          "ppl": 9.345168520935873,
+          "step": 201400
+        }
+      },
+      "wiki2_ppl": 6.482570674799617,
+      "c4_ppl": 8.709228172503584
+    }
+  }
+}

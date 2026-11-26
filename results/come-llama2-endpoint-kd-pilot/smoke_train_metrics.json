@@ -1,0 +1,142 @@
+{
+  "slurm_job_id": "4193679",
+  "objective": "dense group-endpoint hidden-state distillation",
+  "teacher_model": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/models/Llama-2-7b-hf",
+  "initial_student_model": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/checkpoints/come-llama2-9pct-paper/Llama-2-7b-hf_concat_merge_bi_29_worepeat",
+  "output_dir": null,
+  "dataset": "wikitext-2-raw-v1:train",
+  "seed": 10,
+  "sequence_length": 128,
+  "max_steps": 1,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0,
+  "merge_mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    [
+      23,
+      24
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      27,
+      28
+    ],
+    29,
+    30,
+    31
+  ],
+  "execution_plan": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    23,
+    24,
+    24,
+    25,
+    25,
+    26,
+    27,
+    28
+  ],
+  "endpoint_groups": [
+    {
+      "physical_index": 23,
+      "original_layers": [
+        23,
+        24
+      ],
+      "teacher_hidden_index": 25
+    },
+    {
+      "physical_index": 24,
+      "original_layers": [
+        25,
+        26
+      ],
+      "teacher_hidden_index": 27
+    },
+    {
+      "physical_index": 25,
+      "original_layers": [
+        27,
+        28
+      ],
+      "teacher_hidden_index": 29
+    }
+  ],
+  "trainable_parameters": 607150080,
+  "validation_before": {
+    "mean": 0.16043585538864136,
+    "per_group": {
+      "23+24": 0.09657929837703705,
+      "25+26": 0.16401307284832,
+      "27+28": 0.22071519494056702
+    }
+  },
+  "validation_after": {
+    "mean": 0.15965726971626282,
+    "per_group": {
+      "23+24": 0.09638988971710205,
+      "25+26": 0.16331009566783905,
+      "27+28": 0.21927180886268616
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "loss": 0.1563568264245987,
+      "group_losses": [
+        0.09372293949127197,
+        0.16139653325080872,
+        0.2139509916305542
+      ],
+      "grad_norm": 0.443359375
+    }
+  ]
+}

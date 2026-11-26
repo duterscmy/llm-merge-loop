@@ -1,0 +1,73 @@
+{
+  "model": "Llama-2-7b",
+  "method": "CoMe 32-to-29 plus shared-layer loop, dense group-endpoint distillation",
+  "training": {
+    "dataset": "allenai/c4:en/c4-train.00000-of-01024.json.gz",
+    "sequence_length": 512,
+    "steps": 1000,
+    "learning_rate": 1e-05,
+    "warmup_steps": 50,
+    "trainable_parameters": 607150080,
+    "validation_endpoint_loss_before": 0.16650207713246346,
+    "validation_endpoint_loss_after": 0.14802505122497678,
+    "validation_relative_reduction_percent": 11.097174417101701,
+    "slurm_job_id": "4195104"
+  },
+  "mmlu_included": false,
+  "variants": {
+    "merged": {
+      "physical_layers": 29,
+      "logical_executions": 29,
+      "parameters": 6131265536,
+      "wiki2_ppl": 6.243916190670718,
+      "c4_ppl": 8.52644899960923,
+      "commonsense_percent": {
+        "arc_challenge": 43.85665529010239,
+        "arc_easy": 70.32828282828282,
+        "hellaswag": 74.13861780521809,
+        "openbookqa": 41.6,
+        "piqa": 76.76822633297063,
+        "winogrande": 68.58721389108129
+      },
+      "commonsense_average_percent": 62.54649935794254,
+      "delta_from_untrained": {
+        "wiki2_ppl": 0.011156501868790691,
+        "c4_ppl": -0.022930991405063494,
+        "commonsense_average_points": -0.020291190386245717
+      },
+      "slurm_job_id_ppl": "4195110",
+      "slurm_job_id_tasks": "4195427",
+      "pilot_40_step_ppl": {
+        "wiki2": 6.236280287260994,
+        "c4": 8.52892335387737
+      }
+    },
+    "merge_aware": {
+      "physical_layers": 29,
+      "logical_executions": 32,
+      "parameters": 6131265536,
+      "wiki2_ppl": 6.863412730439868,
+      "c4_ppl": 9.353337866323951,
+      "commonsense_percent": {
+        "arc_challenge": 43.003412969283275,
+        "arc_easy": 69.65488215488216,
+        "hellaswag": 73.97928699462258,
+        "openbookqa": 41.8,
+        "piqa": 76.4961915125136,
+        "winogrande": 67.95580110497238
+      },
+      "commonsense_average_percent": 62.148262456045664,
+      "delta_from_untrained": {
+        "wiki2_ppl": -0.2022221314410988,
+        "c4_ppl": -0.29557704596742695,
+        "commonsense_average_points": 0.29464282669749053
+      },
+      "slurm_job_id_ppl": "4195110",
+      "slurm_job_id_tasks": "4195109",
+      "pilot_40_step_ppl": {
+        "wiki2": 6.981017136795371,
+        "c4": 9.563024551761846
+      }
+    }
+  }
+}

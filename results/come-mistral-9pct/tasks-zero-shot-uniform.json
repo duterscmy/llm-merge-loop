@@ -1,0 +1,111 @@
+{
+  "slurm_job_id": "3161728",
+  "variant": "uniform",
+  "model_path": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/checkpoints/come-mistral-9pct/Mistral-7B-v0.1_concat_merge_bi_29_worepeat",
+  "tasks": [
+    "arc_easy",
+    "arc_challenge",
+    "hellaswag",
+    "openbookqa",
+    "piqa",
+    "winogrande"
+  ],
+  "num_fewshot": 0,
+  "limit": null,
+  "seed": 10,
+  "physical_layers": 29,
+  "logical_executions": 32,
+  "parameters": 6587396096,
+  "execution_plan": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "harness": {
+    "results": {
+      "arc_easy": {
+        "acc": 0.7373737373737373,
+        "acc_stderr": 0.00902986177676375,
+        "acc_norm": 0.7382154882154882,
+        "acc_norm_stderr": 0.00902052352721017
+      },
+      "arc_challenge": {
+        "acc": 0.44880546075085326,
+        "acc_stderr": 0.014534599585097662,
+        "acc_norm": 0.48208191126279865,
+        "acc_norm_stderr": 0.014602005585490978
+      },
+      "hellaswag": {
+        "acc": 0.5539733120892253,
+        "acc_stderr": 0.004960624576987784,
+        "acc_norm": 0.7429794861581358,
+        "acc_norm_stderr": 0.004360977256058744
+      },
+      "openbookqa": {
+        "acc": 0.278,
+        "acc_stderr": 0.020055833888070897,
+        "acc_norm": 0.424,
+        "acc_norm_stderr": 0.022122993778135404
+      },
+      "piqa": {
+        "acc": 0.76550598476605,
+        "acc_stderr": 0.009885203143240548,
+        "acc_norm": 0.7720348204570185,
+        "acc_norm_stderr": 0.009788093832324906
+      },
+      "winogrande": {
+        "acc": 0.7040252565114443,
+        "acc_stderr": 0.012829348226339014
+      }
+    },
+    "versions": {
+      "arc_easy": 0,
+      "arc_challenge": 0,
+      "hellaswag": 0,
+      "openbookqa": 0,
+      "piqa": 0,
+      "winogrande": 0
+    },
+    "config": {
+      "model": null,
+      "model_args": null,
+      "num_fewshot": 0,
+      "batch_size": 8,
+      "batch_sizes": [],
+      "device": "cuda",
+      "no_cache": true,
+      "limit": null,
+      "bootstrap_iters": 1000,
+      "description_dict": null
+    }
+  }
+}

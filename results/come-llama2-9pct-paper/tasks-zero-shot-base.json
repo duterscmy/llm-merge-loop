@@ -1,0 +1,86 @@
+{
+  "slurm_job_id": "3200258",
+  "variant": "base",
+  "model_path": "/nobackup/proj/disk/ehpc-reg-2026r01-278/personal/mingyu/Sliding-Window-Merging/models/Llama-2-7b-hf",
+  "tasks": [
+    "arc_easy",
+    "arc_challenge",
+    "hellaswag",
+    "openbookqa",
+    "piqa",
+    "winogrande"
+  ],
+  "num_fewshot": 0,
+  "limit": null,
+  "seed": 10,
+  "physical_layers": 32,
+  "logical_executions": 32,
+  "parameters": 6738415616,
+  "execution_plan": null,
+  "harness": {
+    "results": {
+      "arc_easy": {
+        "acc": 0.7584175084175084,
+        "acc_stderr": 0.008783247004042162,
+        "acc_norm": 0.7403198653198653,
+        "acc_norm_stderr": 0.008996990428562213
+      },
+      "arc_challenge": {
+        "acc": 0.4274744027303754,
+        "acc_stderr": 0.01445686294465065,
+        "acc_norm": 0.45733788395904434,
+        "acc_norm_stderr": 0.014558106543924067
+      },
+      "hellaswag": {
+        "acc": 0.5717984465245967,
+        "acc_stderr": 0.0049380686273494895,
+        "acc_norm": 0.7613025293766182,
+        "acc_norm_stderr": 0.004254162365808037
+      },
+      "openbookqa": {
+        "acc": 0.33,
+        "acc_stderr": 0.0210496121661348,
+        "acc_norm": 0.444,
+        "acc_norm_stderr": 0.02224224437573102
+      },
+      "piqa": {
+        "acc": 0.7774755168661589,
+        "acc_stderr": 0.009704600975718247,
+        "acc_norm": 0.7899891186071817,
+        "acc_norm_stderr": 0.009503353305818573
+      },
+      "winogrande": {
+        "acc": 0.696921862667719,
+        "acc_stderr": 0.012916727462634472
+      }
+    },
+    "versions": {
+      "arc_easy": 0,
+      "arc_challenge": 0,
+      "hellaswag": 0,
+      "openbookqa": 0,
+      "piqa": 0,
+      "winogrande": 0
+    },
+    "n_samples": {
+      "arc_easy": 2376,
+      "arc_challenge": 1172,
+      "hellaswag": 10042,
+      "openbookqa": 500,
+      "piqa": 1838,
+      "winogrande": 1267
+    },
+    "config": {
+      "model": null,
+      "model_args": null,
+      "num_fewshot": 0,
+      "batch_size": 8,
+      "batch_sizes": [],
+      "device": "cuda",
+      "no_cache": true,
+      "limit": null,
+      "bootstrap_iters": 1000,
+      "description_dict": null
+    }
+  }
+}
